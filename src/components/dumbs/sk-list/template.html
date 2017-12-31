@@ -1,0 +1,20 @@
+<div>
+  <ul>
+    <template is="dom-repeat" items="[[items]]">
+      <li class="Card">
+        <div class="Actions">
+          <span class="Delete" on-click="_onDelete" data-id$="[[item.id]]"></span>
+        </div>
+        <span class="Type">
+          [[item.type]]
+        </span>
+        <span class="Amount">
+          [[item.amount]] [[currency]]
+        </span>
+        <span class="Date">
+          [[_computeDate(item.date)]]
+        </span>
+      </li>
+    </template>
+  </ul>
+</div>

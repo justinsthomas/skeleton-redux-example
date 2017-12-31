@@ -1,0 +1,38 @@
+<header class="Header">
+  <img class="Logo" src="/assets/logo.svg" alt="Polymer Skeleton" draggable="false">
+
+  <sk-menu>
+    <sk-menu-item>
+      <a class="MenuLink" href="https://github.com/PolymerX/polymer-skeleton">Github</a>
+    </sk-menu-item>
+
+    <sk-menu-item>
+      <a class="MenuLink" href="https://github.com/PolymerX/polymer-skeleton/issues">Issues</a>
+    </sk-menu-item>
+
+    <sk-menu-item>
+      <a class="MenuLink" href="https://github.com/PolymerX">More from PolymerX</a>
+    </sk-menu-item>
+  </sk-menu>
+</header>
+
+
+<section class="Main">
+  <div class="Form">
+    <div class="CopyFrom"><button>Copy from previous expense...</button></div>
+    <sk-input id="inputType" label="Type" name="type" value="{{expenseType}}"></sk-input>
+    <sk-input label="Amount" min="0.01" step="0.01" max="2500" name="amount" type="number" value="{{expenseAmount}}"></sk-input>
+    <button on-click="_onAdd">Add</button>
+  </div>
+
+  <sk-list items="[[expenses]]" on-delete="_onDelete"></sk-list>
+
+  <div class="Total">[[total]]</div>
+</section>
+
+
+<aside class="Meta">
+  v[[appVersion]] - ENV: [[ENV]]
+</aside>
+
+

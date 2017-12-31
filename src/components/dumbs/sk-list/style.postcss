@@ -1,0 +1,59 @@
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Card {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 2px;
+  background: #FFF;
+  box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+}
+
+.Card > span {
+  display: block;
+}
+
+.Card .Type {
+  font-size: var(--big-font, 25px);
+  margin-bottom: 10px;
+}
+
+.Actions {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.Delete {
+  position: relative;
+  cursor: pointer;
+  height: 15px;
+  display: block;
+  width: 15px;
+}
+
+.Delete::before,
+.Delete::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 15px;
+  top: 0;
+  right: 0;
+  background: #000;
+}
+
+.Delete::before {
+  transform: rotate(45deg);
+}
+
+.Delete::after {
+  transform: rotate(-45deg);
+}
