@@ -2,6 +2,7 @@
 'use strict';
 
 import {createStore, combineReducers, compose, applyMiddleware} from 'redux';
+import app from 'xh-x1-driver';
 
 const expensesState = {
   fromAPI: [],
